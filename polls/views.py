@@ -17,7 +17,7 @@ def detail(request, question_id):
 def index(request):
     latest_question_list = Question.objects.order_by('-pub_date')[:5]
     context = {'latest_question_list': latest_question_list}
-    return render(request, 'polls/index.html', context)
+    return render(request, 'polls/dashboard.0.html', context)
 
 def results(request, question_id):
     response = "You're looking at the results of question %s."
