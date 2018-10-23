@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Flatkit - HTML Version | Bootstrap 4 Web App Kit with AngularJS</title>
+  <title>Python: DJango AngularJS | Bootstrap 4 Web App</title>
   <meta name="description" content="Admin, Dashboard, Bootstrap, Bootstrap 4, Angular, AngularJS" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+  {% load staticfiles %}
   <!-- for ios 7 style, multi-resolution icon of 152x152 -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
-  <link rel="apple-touch-icon" href="../assets/images/logo.png">
+  <link rel="apple-touch-icon" href="{% static 'polls/assets/images/logo.png' %}">
   <meta name="apple-mobile-web-app-title" content="Flatkit">
   <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
   <meta name="mobile-web-app-capable" content="yes">
-  <link rel="shortcut icon" sizes="196x196" href="../assets/images/logo.png">
+  <link rel="shortcut icon" sizes="196x196" href="{% static 'polls/assets/images/logo.png' %}">
   
   <!-- style -->
   <!--python / django app - add style-->  
-  {% load staticfiles %}
+
 
 
   <link rel="stylesheet" href="{% static 'polls/assets/animate.css/animate.min.css' %}" type="text/css"  />
@@ -44,8 +44,8 @@
       <div class="navbar navbar-md no-radius">
         <!-- brand -->
         <a class="navbar-brand">
-        	<div ui-include="'../assets/images/logo.svg'"></div>
-        	<img src="../assets/images/logo.png" alt="." class="hide">
+        	<div ui-include="{% static 'polls/assets/images/logo.svg' %}"></div>
+        	<img src="{% static 'polls/assets/images/logo.png' %}" alt="." class="hide">
         	<span class="hidden-folded inline">Flatkit</span>
         </a>
         <!-- / brand -->
@@ -62,7 +62,7 @@
                 <a href="dashboard.html" >
                   <span class="nav-icon">
                     <i class="material-icons">&#xe3fc;
-                      <span ui-include="'../assets/images/i_0.svg'"></span>
+                      <span ui-include="{% static 'polls/assets/images/i_0.svg' %}"></span>
                     </i>
                   </span>
                   <span class="nav-text">Dashboard</span>
@@ -79,7 +79,7 @@
                   </span>
                   <span class="nav-icon">
                     <i class="material-icons">&#xe5c3;
-                      <span ui-include="'../assets/images/i_1.svg'"></span>
+                      <span ui-include="{% static 'polls/assets/images/i_1.svg' %}"></span>
                     </i>
                   </span>
                   <span class="nav-text">Apps</span>
@@ -110,7 +110,7 @@
                   </span>
                   <span class="nav-icon">
                     <i class="material-icons">&#xe8f0;
-                      <span ui-include="'../assets/images/i_2.svg'"></span>
+                      <span ui-include="{% static 'polls/assets/images/i_2.svg' %}"></span>
                     </i>
                   </span>
                   <span class="nav-text">Layouts</span>
@@ -138,7 +138,7 @@
                 <a href="widget.html" >
                   <span class="nav-icon">
                     <i class="material-icons">&#xe8d2;
-                      <span ui-include="'../assets/images/i_3.svg'"></span>
+                      <span ui-include="{% static 'polls/assets/images/i_3.svg' %}"></span>
                     </i>
                   </span>
                   <span class="nav-text">Widgets</span>
@@ -159,7 +159,7 @@
                   </span>
                   <span class="nav-icon">
                     <i class="material-icons">&#xe429;
-                      <span ui-include="'../assets/images/i_4.svg'"></span>
+                      <span ui-include="{% static 'polls/assets/images/i_4.svg' %}"></span>
                     </i>
                   </span>
                   <span class="nav-text">UI kit</span>
@@ -261,7 +261,7 @@
                   <span class="nav-label"><b class="label no-bg">9</b></span>
                   <span class="nav-icon">
                     <i class="material-icons">&#xe3e8;
-                      <span ui-include="'../assets/images/i_5.svg'"></span>
+                      <span ui-include="{% static 'polls/assets/images/i_5.svg' %}"></span>
                     </i>
                   </span>
                   <span class="nav-text">Pages</span>
@@ -347,7 +347,7 @@
                   </span>
                   <span class="nav-icon">
                     <i class="material-icons">&#xe39e;
-                      <span ui-include="'../assets/images/i_6.svg'"></span>
+                      <span ui-include="{% static 'polls/assets/images/i_6.svg' %}"></span>
                     </i>
                   </span>
                   <span class="nav-text">Form</span>
@@ -403,7 +403,7 @@
                   </span>
                   <span class="nav-icon">
                     <i class="material-icons">&#xe896;
-                      <span ui-include="'../assets/images/i_7.svg'"></span>
+                      <span ui-include="{% static 'polls/assets/images/i_7.svg' %}"></span>
                     </i>
                   </span>
                   <span class="nav-text">Tables</span>
@@ -436,7 +436,7 @@
                   </span>
                   <span class="nav-icon">
                     <i class="material-icons">&#xe1b8;
-                      <span ui-include="'../assets/images/i_8.svg'"></span>
+                      <span ui-include="{% static 'polls/assets/images/i_8.svg' %}"></span>
                     </i>
                   </span>
                   <span class="nav-text">Charts</span>
@@ -509,7 +509,7 @@
         </nav>
       </div>
       <div flex-no-shrink>
-        <div ui-include="'../views/blocks/aside.bottom.0.html'"></div>
+        <div ui-include="{% static 'polls/views/blocks/aside.bottom.0.html' %}"></div>
       </div>
     </div>
   </div>
@@ -537,11 +537,11 @@
                     <i class="fa fa-fw fa-plus text-muted"></i>
                     <span>New</span>
                   </a>
-                  <div ui-include="'../views/blocks/dropdown.new.html'"></div>
+                  <div ui-include="{% static 'polls/views/blocks/dropdown.new.html' %}"></div>
                 </li>
               </ul>
         
-              <div ui-include="'../views/blocks/navbar.form.html'"></div>
+              <div ui-include="{% static 'polls/views/blocks/navbar.form.html' %}"></div>
               <!-- / -->
             </div>
             <!-- / navbar collapse -->
@@ -553,16 +553,16 @@
                   <i class="material-icons">&#xe7f5;</i>
                   <span class="label label-sm up warn">3</span>
                 </a>
-                <div ui-include="'../views/blocks/dropdown.notification.html'"></div>
+                <div ui-include="{% static 'polls/views/blocks/dropdown.notification.html' %}"></div>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link p-0 clear" href="#" data-toggle="dropdown">
                   <span class="avatar w-32">
-                    <img src="../assets/images/a0.jpg" alt="...">
+                    <img src="{% static 'polls/assets/images/a0.jpg' %}" alt="...">
                     <i class="on b-white bottom"></i>
                   </span>
                 </a>
-                <div ui-include="'../views/blocks/dropdown.user.html'"></div>
+                <div ui-include="'{% static 'polls/views/blocks/dropdown.user.html' %}"></div>
               </li>
               <li class="nav-item hidden-md-up">
                 <a class="nav-link pl-2" data-toggle="collapse" data-target="#collapse">
@@ -1021,7 +1021,7 @@
 				  	<div class="streamline b-l m-b m-l">
 		              <div class="sl-item">
 		                <div class="sl-left">
-		                  <img src="../assets/images/a2.jpg" class="img-circle">
+		                  <img src="{% static 'polls/assets/images/a2.jpg' %}" class="img-circle">
 		                </div>
 		                <div class="sl-content">
 		                  <a href class="text-info">Louis Elliott</a><span class="m-l-sm sl-date">5 min ago</span>
@@ -1030,7 +1030,7 @@
 		              </div>
 		              <div class="sl-item">
 		                <div class="sl-left">
-		                  <img src="../assets/images/a5.jpg" class="img-circle">
+		                  <img src="{% static 'polls/assets/images/a5.jpg' %}" class="img-circle">
 		                </div>
 		                <div class="sl-content">
 		                  <a href class="text-info">Terry Moore</a><span class="m-l-sm sl-date">10 min ago</span>
@@ -1039,7 +1039,7 @@
 		              </div>
 		              <div class="sl-item">
 		                <div class="sl-left">
-		                  <img src="../assets/images/a8.jpg" class="img-circle">
+		                  <img src="{% static 'polls/assets/images/a8.jpg' %}" class="img-circle">
 		                </div>
 		                <div class="sl-content">
 		                  <a href class="text-info">Walter Paler</a><span class="m-l-sm sl-date">1 hour ago</span>
@@ -1060,28 +1060,28 @@
 				</div>
 				<ul class="list no-border">
 			        <li class="list-item">
-			          <a href="" class="pull-left w-40 m-r"><img src="../assets/images/a1.jpg" class="img-responsive img-circle"></a>
+			          <a href="" class="pull-left w-40 m-r"><img src="{% static 'polls/assets/images/a1.jpg' %}" class="img-responsive img-circle"></a>
 			          <div class="clear">
 			            <a href="" class="_500 block">Jonathan Doe</a>
 			            <span class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit</span>
 			          </div>
 			        </li>
 			        <li class="list-item">
-			          <a href="" class="pull-left w-40 m-r"><img src="../assets/images/a2.jpg" class="img-responsive img-circle"></a>
+			          <a href="" class="pull-left w-40 m-r"><img src="{% static 'polls/assets/images/a2.jpg' %}" class="img-responsive img-circle"></a>
 			          <div class="clear">
 			            <a href="" class="_500 block">Jack Michale</a>
 			            <span class="text-muted">Sectetur adipiscing elit</span>
 			          </div>
 			        </li>
 			        <li class="list-item">
-			          <a href="" class="pull-left w-40 m-r"><img src="../assets/images/a3.jpg" class="img-responsive img-circle"></a>
+			          <a href="" class="pull-left w-40 m-r"><img src="{% static 'polls/assets/images/a3.jpg' %}" class="img-responsive img-circle"></a>
 			          <div class="clear">
 			            <a href="" class="_500 block">Jessi</a>
 			            <span class="text-muted">Sectetur adipiscing elit</span>
 			          </div>
 			        </li>
 			        <li class="list-item">
-			          <a href="" class="pull-left w-40 m-r"><img src="../assets/images/a4.jpg" class="img-responsive img-circle"></a>
+			          <a href="" class="pull-left w-40 m-r"><img src="{% static 'polls/assets/images/a4.jpg' %}" class="img-responsive img-circle"></a>
 			          <div class="clear">
 			            <a href="" class="_500 block">Sodake</a>
 			            <span class="text-muted">Vestibulum ullamcorper sodales nisi nec condimentum</span>
@@ -1127,7 +1127,7 @@
 	              <li class="list-item">
 	                <a herf class="pull-left m-r">
 	                	<span class="w-40">
-	                  		<img src="../assets/images/b1.jpg" class="w-full" alt="...">
+	                  		<img src="{% static 'polls/assets/images/b1.jpg' %}" class="w-full" alt="...">
 	                 	</span>
 	                </a>
 	                <div class="clear">
@@ -1138,7 +1138,7 @@
 	              <li class="list-item">
 	                <a herf class="pull-left m-r">
 		                <span class="w-40">
-	                  		<img src="../assets/images/b2.jpg" class="w-full" alt="...">
+	                  		<img src="{% static 'polls/assets/images/b2.jpg' %}" class="w-full" alt="...">
 	                 	</span>
 	                </a>
 	                <div class="clear">
@@ -1149,7 +1149,7 @@
 	              <li class="list-item">
 	                <a herf class="pull-left m-r">
 	                    <span class="w-40">
-	                  		<img src="../assets/images/b3.jpg" class="w-full" alt="...">
+	                  		<img src="{% static 'polls/assets/images/b3.jpg' %}" class="w-full" alt="...">
 	                 	</span>
 	                </a>
 	                <div class="clear">
@@ -1160,7 +1160,7 @@
 	              <li class="list-item">
 	                <a herf class="pull-left m-r">
 	                    <span class="w-40">
-	                  		<img src="../assets/images/b4.jpg" class="w-full" alt="...">
+	                  		<img src="{% static 'polls/assets/images/b4.jpg' %}" class="w-full" alt="...">
 	                 	</span>
 	                </a>
 	                <div class="clear">
@@ -1171,7 +1171,7 @@
 	              <li class="list-item">
 	                <a herf class="pull-left m-r">
 	                    <span class="w-40">
-	                  		<img src="../assets/images/b5.jpg" class="w-full" alt="...">
+	                  		<img src="{% static 'polls/assets/images/b5.jpg' %}" class="w-full" alt="...">
 	                 	</span>
 	                </a>
 	                <div class="clear">
@@ -1329,33 +1329,33 @@
   </div>
 <!-- build:js scripts/app.html.js -->
 <!-- jQuery -->
-  <script src="../libs/jquery/jquery/dist/jquery.js"></script>
+  <script src="{% static 'polls/libs/jquery/jquery/dist/jquery.js' %}"></script>
 <!-- Bootstrap -->
-  <script src="../libs/jquery/tether/dist/js/tether.min.js"></script>
-  <script src="../libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="{% static 'polls/libs/jquery/tether/dist/js/tether.min.js' %}"></script>
+  <script src="{% static 'polls/libs/jquery/bootstrap/dist/js/bootstrap.js' %}"></script>
 <!-- core -->
-  <script src="../libs/jquery/underscore/underscore-min.js"></script>
-  <script src="../libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js"></script>
-  <script src="../libs/jquery/PACE/pace.min.js"></script>
+  <script src="{% static 'polls/libs/jquery/underscore/underscore-min.js' %}"></script>
+  <script src="{% static 'polls/libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js' %}"></script>
+  <script src="{% static 'polls/libs/jquery/PACE/pace.min.js' %}"></script>
 
-  <script src="scripts/config.lazyload.js"></script>
+  <script src="{% static 'polls/scripts/config.lazyload.js' %}"></script>
 
-  <script src="scripts/palette.js"></script>
-  <script src="scripts/ui-load.js"></script>
-  <script src="scripts/ui-jp.js"></script>
-  <script src="scripts/ui-include.js"></script>
-  <script src="scripts/ui-device.js"></script>
-  <script src="scripts/ui-form.js"></script>
-  <script src="scripts/ui-nav.js"></script>
-  <script src="scripts/ui-screenfull.js"></script>
-  <script src="scripts/ui-scroll-to.js"></script>
-  <script src="scripts/ui-toggle-class.js"></script>
+  <script src="{% static 'polls/scripts/palette.js' %}"></script>
+  <script src="{% static 'polls/scripts/ui-load.js' %}"></script>
+  <script src="{% static 'polls/scripts/ui-jp.js' %}"></script>
+  <script src="{% static 'polls/scripts/ui-include.js' %}"></script>
+  <script src="{% static 'polls/scripts/ui-device.js' %}"></script>
+  <script src="{% static 'polls/scripts/ui-form.js' %}"></script>
+  <script src="{% static 'polls/scripts/ui-nav.js' %}"></script>
+  <script src="{% static 'polls/scripts/ui-screenfull.js' %}"></script>
+  <script src="{% static 'polls/scripts/ui-scroll-to.js' %}"></script>
+  <script src="{% static 'polls/scripts/ui-toggle-class.js' %}"></script>
 
-  <script src="scripts/app.js"></script>
+  <script src="{% static 'polls/scripts/app.js' %}"></script>
 
   <!-- ajax -->
-  <script src="../libs/jquery/jquery-pjax/jquery.pjax.js"></script>
-  <script src="scripts/ajax.js"></script>
+  <script src="{% static 'polls/libs/jquery/jquery-pjax/jquery.pjax.js' %}"></script>
+  <script src="{% static 'polls/scripts/ajax.js' %}"></script>
 <!-- endbuild -->
 </body>
 </html>
