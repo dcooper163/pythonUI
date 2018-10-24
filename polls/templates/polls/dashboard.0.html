@@ -45,7 +45,7 @@
         <!-- brand -->
         <a class="navbar-brand">
         	<div ui-include="{% static 'polls/assets/images/logo.svg' %}"></div>
-        	<img src="{% static 'polls/assets/images/logo.png' %}" alt="." class="hide">
+        	<img src="{% static 'polls/assets/images/logo.png' %}" alt="." class="show">
         	<span class="hidden-folded inline">Flatkit</span>
         </a>
         <!-- / brand -->
@@ -590,7 +590,7 @@
 <!-- ############ PAGE START-->
 <div class="padding">
 	<div class="margin">
-		<h5 class="mb-0 _300">Hi Jone, Welcome back</h5>
+		<h5 class="mb-0 _300">Hi Robert Clark, Welcome back</h5>
 		<small class="text-muted">Awesome uikit for your next project</small>
 	</div>
 	<div class="row">
@@ -685,6 +685,18 @@
 			                tooltipOpts: { content: '%x.0 is %y.4',  defaultTheme: false, shifts: { x: 0, y: -40 } }
 			              }
 			            " style="height:162px" >
+			              
+			              
+	{% if latest_question_list %}
+    <ul>
+  {% for question in latest_question_list %}
+        <li><a href="/polls/{{ question.id }}/">{{ question.question_text }}</a></li>
+  {% endfor %}
+    </ul>
+  {% else %}
+    <p>No polls are available.</p>
+  {% endif %}
+			              
 			            </div>
 			        </div>
 		        </div>
@@ -1323,7 +1335,6 @@
     </div>
   </div>
   <!-- / -->
-
 <!-- ############ LAYOUT END-->
 
   </div>

@@ -3,6 +3,9 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
+    url(r'^inbox', views.inbox, name='inbox'),
+    url(r'^contact', views.contact, name='contact'),
+    url(r'^calendar', views.calendar, name='calendar'),
     url(r'^$', views.index, name='index'),
     #url(r'^$', views.index, name='index'),
     # ex: /polls/5/

@@ -26,7 +26,15 @@ def results(request, question_id):
 def vote(request, question_id):
     return HttpResponse("You're voting on question %s." % question_id)
     
-    
+def inbox(request):
+    return render(request, 'polls/inbox.html')
+
+def contact(request):
+    return render(request, 'polls/contact.html')
+
+def calendar(request):
+    return render(request, 'polls/calendar.html')
+
 #def index(request):
 #    return HttpResponse("This is the first view test")
 
