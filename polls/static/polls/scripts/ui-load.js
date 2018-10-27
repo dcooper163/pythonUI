@@ -1,4 +1,3 @@
-
 /**
  * 0.1.0
  * Deferred load js/css file, used for ui-jq.js and Lazy Loading.
@@ -46,6 +45,7 @@ var uiLoad = uiLoad || {};
 		var deferred = $.Deferred();
 		var script = $document.createElement('script');
 		script.src = src;
+		console.log(script);
 		script.onload = function (e) {
 			deferred.resolve(e);
 		};
